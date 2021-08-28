@@ -1,0 +1,39 @@
+spring:
+  main:
+    banner-mode: "off"
+
+info:
+  application:
+    name: STARTER_KIT
+  api-version: 0.1.0
+
+swagger-ui:
+  enabled: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, prometheus
+        exclude: shutdown
+      base-path: /
+  info:
+    git:
+      mode: full
+  endpoint:
+    health:
+      show-details: always
+
+logging:
+  level:
+    org:
+      springframework: INFO
+    com:
+      stub: INFO
+
+server:
+  port: 8442
+  ssl:
+    key-store: classpath:keystore/jwt.jks
+    key-store-password: fqctrace
+    key-alias: membership

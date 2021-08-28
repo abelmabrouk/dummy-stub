@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: STUB-PROJECT
+  cloud:
+    vault:
+      enabled: false
